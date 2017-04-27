@@ -1,18 +1,31 @@
 <!-- D3.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
-<script src="radar.js" charset="utf-8"></script>
-<link rel="stylesheet" type="text/css" href="style.css">
+<script src="/s/radar.js" charset="utf-8"></script>
 
+<style type="text/css">
+	.legend {
+	fill: lightslategrey;
+	font-size: 1.25em;
+	}
 
-<div class="middle">
-	<div id="radarChart" class="radarChartALL" class="radio-group"></div>
-	<form name="chartSelector" id="selector">
-	    <label><input type="radio" name="selected" id="all" value="4"/><div class="box" id="all"><span>All</span></div></label>
-	    <label><input type="radio" name="selected" id="pm" value="0"/><div class="box" id="pm"><span>Project manager</span></div></label>
-	    <label><input type="radio" name="selected" id="qm" value="1"/><div class="box" id="qm"><span>Quality manager</span></div></label>
-	    <label><input type="radio" name="selected" id="dm" value="2"/><div class="box" id="dm"><span>Delivery manager</span></div></label>
-    </form>
-</div>	
+	#radarChart{
+		margin: auto;
+		width: 700px;
+	}
+
+	#pm{
+		border-bottom: 5px solid #FF6969;
+	}
+
+	#qm{
+		border-bottom: 5px solid #57B3FF;
+	}
+
+	#dm{
+		border-bottom: 5px solid #7AE27A;
+	}
+</style>
+<div id="radarChart" class="radarChartALL" class="radio-group"></div>
 <script type="text/javascript">
 
 	// Set-Up  
@@ -65,6 +78,4 @@
 			
 	//Call function to draw the Radar chart
 	RadarChart(".radarChartAll", data, radarChartOptions);
-	document.chartSelector.selected[0].checked=true;
-
 </script>

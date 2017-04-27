@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/ >
+        <link rel="stylesheet" type="text/css" href="http://kuhberg.dk/wipro/style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+        <script src="http://kuhberg.dk/wipro/radar.js" charset="utf-8"></script>
+    
+    </head>
+    <body>
+
+        <div class="middle">
+            <div id="radarChart" class="radarChartALL" class="radio-group"></div>
+            <form name="chartSelector" id="selector">
+                <label><input type="radio" name="selected" id="all" value="4"/><div class="box" id="all"><span>All</span></div></label>
+                <label><input type="radio" name="selected" id="pm" value="0"/><div class="box" id="pm"><span>Project manager</span></div></label>
+                <label><input type="radio" name="selected" id="qm" value="1"/><div class="box" id="qm"><span>Quality manager</span></div></label>
+                <label><input type="radio" name="selected" id="dm" value="2"/><div class="box" id="dm"><span>Delivery manager</span></div></label>
+            </form>
+        </div>
+        <script>
+            ////////////////////////////////////////////////////////////// 
+            //////////////////////// Set-Up ////////////////////////////// 
+            ////////////////////////////////////////////////////////////// 
+
+            var margin = {top: 100, right: 100, bottom: 100, left: 100},
+                width = Math.min(700, window.innerWidth - 10) - margin.left - margin.right,
+                height = Math.min(width, window.innerHeight - margin.top - margin.bottom - 20);
+                    
+            // Data 
+            var data = [
+                  [//PM
+                    {axis:"Planning",value:10},
+                    {axis:"Monitoring",value:8},
+                    {axis:"Reporting",value:10},
+                    {axis:"Delivering",value:6},
+                    {axis:"Learning",value:8},
+                    {axis:"Managing",value:10},
+                    {axis:"Validating",value:2}     
+                  ],[//QM
+                    {axis:"Planning",value:5},
+                    {axis:"Monitoring",value:9},
+                    {axis:"Reporting",value:8},
+                    {axis:"Delivering",value:4},
+                    {axis:"Learning",value:5},
+                    {axis:"Managing",value:9},
+                    {axis:"Validating",value:10}    
+                  ],[//DM
+                    {axis:"Planning",value:4},
+                    {axis:"Monitoring",value:7},
+                    {axis:"Reporting",value:4},
+                    {axis:"Delivering",value:10},
+                    {axis:"Learning",value:4},
+                    {axis:"Managing",value:8},
+                    {axis:"Validating",value:9} 
+                  ]
+            ];
+
+            //Draw the Chart 
+            var color = d3.scale.ordinal()
+                .range(["#FF6969","#57B3FF","#7AE27A"]);
+                
+            var radarChartOptions = {
+              w: width,
+              h: height,
+              margin: margin,
+              maxValue: 10,
+              levels: 10,
+              roundStrokes: true,
+              color: color
+            };
+            //Call function to draw the Radar chart
+            RadarChart(".radarChartALL", data, radarChartOptions);
+            document.chartSelector.selected[0].checked=true;
+        </script>
+    </body>
+</html>

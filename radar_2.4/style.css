@@ -1,0 +1,25 @@
+body{
+	font-family: 'Raleway', sans-serif;
+}			
+
+.legend {
+	fill: lightslategrey;
+	font-size: 1.25em;
+}
+
+#radarChart{
+	margin: auto;
+	width: 700px;
+}
+
+#pm{
+	border-bottom: 5px solid #FF6969;
+}
+
+#qm{
+	border-bottom: 5px solid #57B3FF;
+}
+
+#dm{
+	border-bottom: 5px solid #7AE27A;
+}
