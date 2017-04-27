@@ -4,7 +4,20 @@ body{
 
 .hidden{
     display: none;
+}
+
+.no-gutter{
+    padding-right:0;
+    padding-left:0;
+}
+
+h3{
+    margin-top: 0px;
 }           
+
+h4{
+    width: 90%;
+}
 
 #theContent{
     width: 1012px;
@@ -16,7 +29,7 @@ body{
 
 #selector{
     //width: 700px;
-    //display: table;
+    display: table;
     //margin: -710px auto;
 }
 
@@ -64,7 +77,7 @@ body{
     opacity: 1;
 }
 .middle .box {
-    width: 175px;
+    width: 155px;
     height: 40px;
     border-bottom: 5px solid lightslategray;
     background-color: #fff;
@@ -97,4 +110,16 @@ body{
 
 #dm{
     border-bottom: 5px solid #7AE27A;
+}
+
+#project{
+    display: none;
+}
+
+#delivery{
+    display: none;
+}
+
+.manager{
+    margin-top: 10px;
 }
