@@ -134,15 +134,34 @@ blobWrapper
             .style("fill-opacity", 0.7);
         var checked = this.id;
         document.chartSelector.selected[i+1].checked=true;
+
+        document.getElementById("personaText").style.display = "none";
+            if (i == 0) {
+            	document.getElementById("project").style.display = "initial";
+            	document.getElementById("delivery").style.display = "none";
+            	document.getElementById("quality").style.display = "none";
+            }
+
+            if (i == 1) {
+            	document.getElementById("project").style.display = "none";
+            	document.getElementById("delivery").style.display = "initial";
+            	document.getElementById("quality").style.display = "none";
+            }
+
+            if (i == 2) {
+            	document.getElementById("project").style.display = "none";
+            	document.getElementById("delivery").style.display = "none";
+            	document.getElementById("quality").style.display = "initial";
+            }
     })
-    .on('mouseout', function(){
+    /*.on('mouseout', function(){
         //Bring back all blobs
         document.chartSelector.selected[0].checked=true;
         d3.selectAll(".radarArea")
             .transition().duration(200)
             .style("fill", function(d,i) { return cfg.color(i); })
             .style("fill-opacity", cfg.opacityArea);
-    });
+    });*/
 
 // Radio button highlighter
 var rad = document.chartSelector.selected;
@@ -173,6 +192,24 @@ for(var i = 0; i < rad.length; i++) {
                 .transition().duration(200)
                 .style("fill", cfg.color(this.value))
                 .style("fill-opacity", 0.7);
+            }
+            document.getElementById("personaText").style.display = "none";
+            if (this.value == 0) {
+            	document.getElementById("project").style.display = "initial";
+            	document.getElementById("delivery").style.display = "none";
+            	document.getElementById("quality").style.display = "none";
+            }
+
+            if (this.value == 1) {
+            	document.getElementById("project").style.display = "none";
+            	document.getElementById("delivery").style.display = "initial";
+            	document.getElementById("quality").style.display = "none";
+            }
+
+            if (this.value == 2) {
+            	document.getElementById("project").style.display = "none";
+            	document.getElementById("delivery").style.display = "none";
+            	document.getElementById("quality").style.display = "initial";
             }
         };
 }   

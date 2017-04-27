@@ -120,6 +120,15 @@ h4{
     display: none;
 }
 
+#quality{
+    display: none;
+}
+
+#personaText{
+    color: black;
+    display: inherit;
+}
+
 .manager{
     margin-top: 10px;
 }
