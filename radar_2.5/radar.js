@@ -1,6 +1,4 @@
-/////////////////////////////////////////////////////////
-//////////// Start of radar charh function //////////////
-/////////////////////////////////////////////////////////
+// Start of radar charh function
 
 function RadarChart(id, data, options) {
     var cfg = {
@@ -49,6 +47,7 @@ var svg = d3.select(id).append("svg")
         .attr("width",  cfg.w + cfg.margin.left + cfg.margin.right)
         .attr("height", cfg.h + cfg.margin.top + cfg.margin.bottom)
         .attr("class", "radar"+id);
+
 //Append a g element        
 var g = svg.append("g")
         .attr("transform", "translate(" + (cfg.w/2 + cfg.margin.left) + "," + (cfg.h/2 + cfg.margin.top) + ")");
@@ -88,9 +87,9 @@ axis.append("line")
 //Append the labels at each axis
 axis.append("text")
     .attr("class", "legend")
-    .style("font-size", "16px")
+    .style("font-size", "14px")
     .attr("text-anchor", "middle")
-    .attr("dy", "0.35em")
+    .attr("dy", "-0.75em")
     .attr("x", function(d, i){ return rScale(maxValue * cfg.labelFactor) * Math.cos(angleSlice*i - Math.PI/2); })
     .attr("y", function(d, i){ return rScale(maxValue * cfg.labelFactor) * Math.sin(angleSlice*i - Math.PI/2); })
     .text(function(d){return d})

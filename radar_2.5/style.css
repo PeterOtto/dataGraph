@@ -1,27 +1,33 @@
 body{
     font-family: 'Raleway', sans-serif;
+}
+
+.hidden{
+    display: none;
 }           
+
+#theContent{
+    width: 1012px;
+}
 
 .legend {
     fill: lightslategrey;
-    font-size: 1.25em;
 }
 
 #selector{
-    width: 700px;
-    display: table;
-    margin: -710px auto;
+    //width: 700px;
+    //display: table;
+    //margin: -710px auto;
 }
 
 #radarChart{
-    margin: auto;
-    width: 700px;
+    //margin: auto;
+    //width: 700px;
 }
 
 .middle {
-    width: 100%;
-    height: 700px;
-    text-align: center;
+    //height: 700px;
+    //text-align: center;
 }
 
 .middle h1 {
@@ -75,7 +81,6 @@ body{
     left: 0;
     right: 0;
     transition: all 300ms ease;
-    font-size: 1.25em;
     color: lightgrey;
 }
 .middle .box span:hover{
