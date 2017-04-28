@@ -214,7 +214,7 @@ for(var i = 0; i < rad.length; i++) {
         };
 }   
     
-// Helper Function 
+//Helper Function 
 //Taken from http://bl.ocks.org/mbostock/7555321
 //Wraps SVG text    
 function wrap(text, width) {
