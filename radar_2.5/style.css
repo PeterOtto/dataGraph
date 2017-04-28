@@ -71,13 +71,13 @@ h4{
     background-color: rgba(122,226,122,0.7);
 }
 .middle input[type="radio"]:checked + .box span {
-    color: white;
+    color: white !important;
 }
 .middle input[type="radio"]:checked + .box span:before {
     opacity: 1;
 }
 .middle .box {
-    width: 155px;
+    width: 168px;
     height: 40px;
     border-bottom: 5px solid lightslategray;
     background-color: #fff;
@@ -101,15 +101,27 @@ h4{
 }
 
 #pm{
-    border-bottom: 5px solid #FF6969;
+    border-bottom: 3px solid #FF6969;
 }
 
 #qm{
-    border-bottom: 5px solid #57B3FF;
+    border-bottom: 3px solid #57B3FF;
 }
 
 #dm{
-    border-bottom: 5px solid #7AE27A;
+    border-bottom: 3px solid #7AE27A;
+}
+
+#pm span{
+    color: #FF6969;
+}
+
+#qm span{
+    color: #57B3FF;
+}
+
+#dm span{
+    color: #7AE27A;
 }
 
 #project{
@@ -131,4 +143,10 @@ h4{
 
 .manager{
     margin-top: 10px;
+    height: 425px;
+    overflow: hidden;
+}
+
+.manager p{
+    margin-bottom: 6px;
 }
