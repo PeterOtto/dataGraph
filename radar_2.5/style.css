@@ -149,4 +149,7 @@ h4{
 
 .manager p{
     margin-bottom: 5px;
+    font-size: 14px;
+    letter-spacing: inherit;
+    line-height: 1.42857143;
 }
