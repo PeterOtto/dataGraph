@@ -18,7 +18,7 @@ h4{
 }
 
 h5{
-    margin: -10 0 0 0px;
+    margin: -10px 0px 0px 0px !important;;
 }
 
 #theContent{
@@ -30,19 +30,7 @@ h5{
 }
 
 #selector{
-    //width: 700px;
     display: table;
-    //margin: -710px auto;
-}
-
-#radarChart{
-    //margin: auto;
-    //width: 700px;
-}
-
-.middle {
-    //height: 700px;
-    //text-align: center;
 }
 
 .middle h1 {
@@ -150,7 +138,7 @@ h5{
 }
 
 .manager p{
-    margin-bottom: 5px 0px 5px 0px !important;
+    margin: 5px 0px 5px 0px !important;
     font-size: 14px;
     letter-spacing: inherit;
     line-height: 1.42857143;
