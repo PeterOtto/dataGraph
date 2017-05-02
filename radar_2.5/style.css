@@ -13,7 +13,7 @@ h3{
 
 h4{
     width: 90%;
-    margin: 0px 0px;
+    margin: 0px 0px !important;
     
 }
 
@@ -150,7 +150,7 @@ h5{
 }
 
 .manager p{
-    margin-bottom: 5px 0px 5px 0px;
+    margin-bottom: 5px 0px 5px 0px !important;
     font-size: 14px;
     letter-spacing: inherit;
     line-height: 1.42857143;
